@@ -1,0 +1,264 @@
+import { Component } from 'react';
+import './Destination.css';
+import { Link } from 'react-router-dom';
+import m2 from '../../assets/m2.jpg'
+// import { MenuItems } from "../MenuItems/MenuItems";
+
+class DestinationData extends Component {
+    render() {
+        return (
+            
+        <div className='first-description'>
+            <Link to={this.props.title} className={this.props.className}>
+            {/* <div className={this.props.className}> */}
+                <div className='description-text'>
+                    <h2>{this.props.heading}</h2>
+                    <p>{this.props.text}</p>
+                    
+                </div>
+
+                
+                <div className='image'>
+                    
+                    <img 
+                        alt="img"
+                        src = {this.props.img1}
+                        />
+                    <img 
+                        alt="img"
+                        src = {this.props.img2}
+                    />
+
+
+                </div>
+                
+            
+            {/* </div> */}
+            </Link>
+
+            {/* <div className='description-button'>
+                <button>{this.props.button}</button>
+            </div> */}
+
+            
+
+
+        </div>
+        
+        )
+    }
+}
+
+export default DestinationData;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.destination {
+    margin: 9rem 6rem;
+    
+}
+
+.destination h1 {
+    font-size: 3rem;
+}
+
+.first-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    border-radius: 2rem;
+    border: 2px solid black;
+    padding: 3rem 1rem 1rem;
+    /* hover effect*/
+    -moz-transition: ease-in-out 0s, 1s ease-in 1s, .1s ease-out 0s;
+}
+.first-description:hover {
+    -webkit-transform: scale(1.02);
+	transform: scale(1.02);
+    -webkit-transition: .1s ease-in;
+	transition: .1s ease-in;
+}
+
+.first-description-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+    border-radius: 2rem;
+    border: 2px solid black;
+    padding: 3rem 1rem 1rem;
+}
+
+.description-text {
+    width: 45%;
+    text-align: start;
+    font-size: 1.1rem;
+    color: black;
+
+}
+
+.description-text h2 {
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.image {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+    width: 50%;
+
+    z-index: -99;
+}
+
+.image img {
+    width: 49%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: -1px 1px 62px -18px rgba(0,0,0,0.19);
+}
+
+.image img:nth-child(2) {
+    position: absolute;
+    top: -10%;
+    right: 0;
+}
+
+
+.description-button {
+    /* make row */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.description_image {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.description_image-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 850px) {
+    .destination {
+        margin: 4rem 2rem;
+    }
+
+    .first-description {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .description_image-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .description-text {
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+        margin: 1.8rem 0;
+    }
+
+    .image img {
+        height: 250px;
+    }
+
+    .description_image {
+        flex-direction: column;
+    }
+    
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+import { Component } from 'react';
+import './Destination.css';
+import { Link } from 'react-router-dom';
+import m2 from '../../assets/m2.jpg'
+// import { MenuItems } from "../MenuItems/MenuItems";
+
+class DestinationData extends Component {
+    render() {
+        return (
+            
+
+        <div className='first-description'>
+            <Link to={this.props.title} className={this.props.className}>
+            {/* <div className={this.props.className}> */}
+
+                
+                <div className='image'>
+                    
+                    <img 
+                        alt="img"
+                        src = {this.props.img1}
+                        />
+                    <img 
+                        alt="img"
+                        src = {this.props.img2}
+                    />
+
+
+                </div>
+                
+                <div className='description-text'>
+                    <h2>{this.props.heading}</h2>
+                    <p>{this.props.text}</p>
+                    
+                </div>
+
+                <p>THIS IS THE Destination COMPONENT</p>
+            
+            <div>
+
+                <div>Descriere
+                    <h1>Titlu</h1>
+                </div>
+                
+                <div>Galerie Photo
+                    {/* Insereaza Imagini */}
+                    
+                </div>
+                
+                <div>Dificultate</div>
+                
+                <div>Echipament</div>
+                
+                <div>Harta Traseu</div>
+
+
+            </div>
+
+            {/* </div> */}
+            </Link>
+
+            {/* <div className='description-button'>
+                <button>{this.props.button}</button>
+            </div> */}
+
+            
+
+
+        </div>
+        )
+    }
+}
+
+export default DestinationData;
